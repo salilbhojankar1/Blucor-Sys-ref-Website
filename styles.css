@@ -1,0 +1,242 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.blue-text{
+  color: #0077cc;
+  text-align: center;
+  /* font-weight: 600; */
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  /* border: 8px solid black; */
+
+}
+.slider {
+  /* border: 8px solid black; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  flex-wrap: wrap;
+}
+.menu{
+  width: 100%auto;
+  float: center;
+  height: 70px;
+  color: #0077cc;
+  background-color: transparent;
+  
+  
+}
+ul{
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+ul li{
+  list-style: none;
+  margin-left: 62px;
+  margin-top: 27px;
+  font-size: 14px
+}
+ ul li a{
+  text-decoration: none;
+  color: #191fc9;
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+  
+}
+
+ul li a:hover{
+ color: rgb(177, 41, 150) ;
+ 
+}
+/* 
+ .start{
+ margin-right: auto;
+ position: relative;
+ display: flex;
+ justify-content: flex-end;
+ border: 8px solid black;
+ 
+ }   */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  color: #3e7878;
+  transition: 400ms;
+}
+.container:hover{
+  transform: scale(1.03);
+  color: #64a1ea;
+}
+/* .hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+} */
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+.slide.active {
+  opacity: 1;
+  display: block;
+}
+.hero-text {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  top: 40%;
+  color: rgb(19, 37, 37);
+}
+.hero-text .btn {
+
+  width: 200px;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 1em 2em;
+  background: #87bde3;
+  color: #090909;
+  text-decoration: none;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 400ms;
+
+}
+.hero-text .btn::after{
+  content: '';
+  position: absolute;
+  height: 112%;
+  width: 105%;
+  background-image: linear-gradient(to bottom right, rgb(101, 101, 215),rgb(166, 41, 166));
+  border-radius: 20px;
+  z-index: -1;
+}
+.hero-text .btn:hover{
+  z-index: 0;
+  box-shadow: 40px 0 100px rgb(110, 110, 230), -40px 0 100px rgb(227, 47, 227);
+  transform: scale(1.03);
+}
+section {
+  padding: 60px 0;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  flex: 1 1 30%;
+  background: #2b1652;
+  padding: 20px;
+  border-radius: 8px;
+  transition: 400ms;
+  
+}
+
+.card:hover{
+  transform: scale(1.03);
+}
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  
+}
+form input:hover, form textarea:hover{
+background-color: #afd1e8;
+
+}
+form button {
+  
+  padding: 1em 2em;
+  font-weight: 600;
+  background-color: #007fd3;
+  color: rgb(55, 48, 48);
+  border: none;
+  border-radius: 1000px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  position: relative;
+
+  transition: 400ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form button::after{
+  content: '';
+  position: absolute;
+  height: 109%;
+  width: 105%;
+  border-radius: 1000px;
+  background-image:linear-gradient(to bottom right, rgb(107, 107, 208), rgb(190, 70, 190));
+  z-index: -1;
+
+}
+
+form button:hover{
+  z-index: 0;
+  transform: scale(1.03);
+  box-shadow: 40px 0 100px rgb(110, 110, 230), -40px 0 100px rgb(227, 47, 227);
+}
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.7s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+  }
+  .card {
+    flex: 1 1 100%;
+  }
+  .hero-text h1 {
+    font-size: 24px;
+  }
+}
+.rev {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: all 1.7s ease;
+}
+.rev.activ {
+  opacity: 1;
+  transform: translateY(0);
+}
+
