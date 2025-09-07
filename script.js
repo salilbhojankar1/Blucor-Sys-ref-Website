@@ -35,3 +35,27 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+
+
+function sent() {
+  var email = document.getElementById("mail").value.trim();
+  var name = document.getElementById("user").value.trim();
+  var message = document.getElementById("msg").value.trim();
+
+  if (email === "" || name === "" || message === "") {
+    alert("Fill all information first");
+    return;
+  }
+
+  // Inline email validation
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    alert("Invalid email format.");
+    return;
+  }
+  
+
+
+  // Everything is valid
+  alert("Thank you!!!");
+}

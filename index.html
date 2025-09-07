@@ -6,21 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BlucorSys Reference</title>
   <link rel="stylesheet" href="styles.css"/>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
    
-        <div class="blue-text">
-      
-          <h1>Blucor Sys Pvt Ltd</h1> 
-         
-        </div> <div class="slider">
-         <section id="slider" class="rev">
-            <img src="pp.jpg" class="slide active" alt="Slide 1">
-            <img src="meet.jpg" class="slide" alt="Slide 2">
-            </section>
-        </div>
-    
-        <section id="menu" class="rev">
+        <div class="blue-text" onclick="info()">
+      <!-- <i class='bx bx-code-alt'></i> -->
+        <i class='bx bx-code-block'></i>
+          <a href="#">Blucor Sys Pvt Ltd</a> 
+          
+        </div> 
+        
+        <!-- <section id="menu" class="rev"> -->
          <div class="menu">
      
           <ul>
@@ -32,11 +29,17 @@
           </ul>
         
           </div>
-         </section>
+         <!-- </section> -->
+         
+        <div class="slider">
+          <section id="slider" class="rev">
+            <img src="pp.jpg" class="slide active" alt="Slide 1">
+            <img src="meet.jpg" class="slide" alt="Slide 2">
+             </section>
+        </div> 
+   
     <!-- <header class="hero"> -->
       <!-- <div class="start"><a href="#" class="bt">Get Started</a></div> -->
-      
-     
     
            
         <section id="services" class="reveal">
@@ -81,16 +84,16 @@
     <div class="container">
       <h2>Contact Us</h2>
       <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
+        <input type="text" placeholder="Your Name" required id="user">
+        <input type="email" placeholder="Email Address" required id="mail">
+        <textarea placeholder="Your Message" rows="5" required id="msg"></textarea>
+        <button type="submit" onclick="sent()">Send Message</button>
       </form>
     </div>
     </section>
 
     <footer>
-    <div class="container">
+    <div class="footer">
       <p>&copy; 2025 BlucorSys Reference. All rights reserved.</p>
     </div>
     </footer>
